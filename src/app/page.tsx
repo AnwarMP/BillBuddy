@@ -4,6 +4,8 @@ import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
 import { LogIn } from "lucide-react";
+import FileUpload from "@/components/FileUpload";
+
 
 export default async function Home() {
   const {userId} = await auth();
@@ -14,7 +16,7 @@ export default async function Home() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center">
-            <h1 className="mr-3 text-5xl font-semibold">Healthcare, demystified</h1>
+            <h1 className="mr-3 text-5xl font-semibold">Healthcare, demystified.</h1>
             {/* <UserButton afterSignOutUrl="/" /> */}
             <UserButton afterSignOutUrl="/" />
           </div>
@@ -45,7 +47,7 @@ export default async function Home() {
           </p>
 
           <div className="w-full mt-4">
-            {/* {isAuth ? (
+            {isAuth ? (
               <FileUpload />
             ) : (
               <Link href="/sign-in">
@@ -54,8 +56,8 @@ export default async function Home() {
                   <LogIn className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-            )} */}
-            {isAuth ? (<h1> File Upload</h1>) :
+            )}
+            {/* {isAuth ? (<h1> File Upload</h1>) :
               (
                 <Link href='/sign-in'>
               <Button> Login to get Started! 
@@ -63,7 +65,7 @@ export default async function Home() {
               </Button>
               </Link>
             )
-            }
+            } */}
           </div>
         </div>
       </div>
