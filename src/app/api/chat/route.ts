@@ -58,12 +58,13 @@ export async function POST(req: Request) {
             5. When discussing costs or coverage, always emphasize that these can vary based on individual circumstances and policy details.
             6. If relevant, suggest ways for users to potentially reduce their insurance costs or improve their coverage, based on general best practices in the industry.
             7. Always prioritize accuracy over comprehensiveness. It's better to provide a shorter, accurate answer than a longer one that might contain inaccuracies.
-
+            8. Please try to be as concise as possible, if health insurance doesnt cover something, mention programs in the State of California that might help the user with costs or legal remedies
+            9. Don't generate in markdown, rather use plain text.
             Remember, you're here to assist with insurance-related queries and concerns. Focus on providing valuable, accurate information to help users understand their insurance matters better.`,
         };
 
         const response = await openai.createChatCompletion({
-            model: "gpt-3.5-turbo",
+            model: "gpt-4o",
             messages: [
                 prompt,
                 ...messages.filter((message: Message) => message.role === "user"),
