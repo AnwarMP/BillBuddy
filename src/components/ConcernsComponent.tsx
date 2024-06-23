@@ -16,15 +16,16 @@ const concernOptions = [
   { id: 'find_a_provider', label: 'Find a provider' },
   { id: 'medication_costs', label: 'Medication costs' },
 ];
+
 type Props = { chatId: number };
 
-const ConcernsComponent = ({ chatId } : Props) => {
+const ConcernsComponent = ({ chatId }: Props) => {
   const router = useRouter();
-  const [selectedConcerns, setSelectedConcerns] = useState([]);
+  const [selectedConcerns, setSelectedConcerns] = useState<string[]>([]);
   const [otherConcern, setOtherConcern] = useState('');
 
   const saveConcernsMutation = useMutation({
-    mutationFn: async (concerns) => {
+    mutationFn: async (concerns: string[]) => {
       const response = await axios.post('/api/save-concerns', { chatId, concerns });
       return response.data;
     },
@@ -38,7 +39,7 @@ const ConcernsComponent = ({ chatId } : Props) => {
     },
   });
 
-  const handleConcernToggle = (concernId) => {
+  const handleConcernToggle = (concernId: string) => {
     setSelectedConcerns((prev) =>
       prev.includes(concernId)
         ? prev.filter((id) => id !== concernId)
@@ -86,9 +87,8 @@ const ConcernsComponent = ({ chatId } : Props) => {
         <Button
           onClick={handleSubmit}
           className="w-full mt-6"
-          disabled={saveConcernsMutation.isLoading}
         >
-          {saveConcernsMutation.isLoading ? 'Saving...' : 'Submit'}
+          { 'Submit'}
         </Button>
       </CardContent>
     </Card>
