@@ -56,20 +56,17 @@ export default async function Home() {
           <NavigationMenuViewport />
         </NavigationMenu>
       </div>
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="flex flex-col items-center text-center" >
-           <Image src={"/iconthin.svg"} alt="BillBuddy Logo" width={500} height={500} />
-        </div>
-      </div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="flex flex-col items-center text-center">
+        <div className="flex mt-0.5 mb-10" >
+           <Image src={"/iconthin.svg"} alt="BillBuddy Logo" width={500} height={500} />
+        </div>
           <div className="flex items-center">
             <h2 className="mr-3 text-5xl font-semibold">Healthcare, demystified.</h2>
-            {/* <UserButton afterSignOutUrl="/" /> */}
             <UserButton afterSignOutUrl="/" />
           </div>
 
-          <div className="flex mt-2">
+          <div className="flex mt-8">
             {/* {isAuth &&
               <Button>
                     Go to Chats 

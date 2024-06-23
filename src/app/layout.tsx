@@ -22,8 +22,7 @@ export default function RootLayout({
         <html lang="en">
           <body className={inter.className}>{children}
           <Toaster />
-          </body>
-    
+          </body>  
         </html>
       </Providers>
     </ClerkProvider>
