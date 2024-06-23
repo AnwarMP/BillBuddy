@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BillBuddy
+BillBuddy is a powerful tool designed to simplify health insurance by using advanced AI technology to analyze and break down complex insurance policies into clear, understandable insights. Users can upload their insurance policy documents and receive instant, accurate answers to any questions about their coverage, deductibles, premiums, and more. BillBuddy aims to empower individuals to make confident healthcare decisions by providing clarity and peace of mind.
 
-## Getting Started
+## Why BillBuddy is Needed
+According to the Center for Health Care Strategies, nearly 9 out of 10 adults in the United States struggle with health literacy. This lack of understanding can lead to confusion and anxiety when dealing with health insurance policies. BillBuddy addresses this critical need by transforming dense, jargon-filled documents into accessible and actionable information, helping users navigate their health insurance with ease.
 
-First, run the development server:
+# Getting Started
+Follow these steps to set up and run BillBuddy on your local machine.
+
+1. Clone the Repository
+Clone the BillBuddy repository from GitHub to your local machine.
+
+```bash
+git clone https://github.com/yourusername/billbuddy.git
+cd billbuddy
+```
+
+2. Create a .env File
+Create a .env file in the root directory of the project and add the following environment variables:
+
+```plaintext
+# Clerk
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+
+# Database
+DATABASE_URL=
+
+# AWS S3
+NEXT_PUBLIC_S3_ACCESS_KEY_ID=
+NEXT_PUBLIC_S3_SECRET_ACCESS_KEY=
+NEXT_PUBLIC_S3_BUCKET_NAME=
+
+# Pinecone
+PINECONE_ENVIRONMENT=
+PINECONE_API_KEY=
+
+# OpenAI
+OPENAI_API_KEY=
+
+NEXT_BASE_URL=http://localhost:3000
+```
+Make sure to replace the placeholders with your actual credentials and keys.
+
+3. Install Dependencies
+Install the necessary dependencies using npm.
+
+
+```bash
+npm install
+```
+
+4. Run the Development Server
+Start the development server.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Your application should now be running on http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Technologies Used
+Next.js: React framework for building the frontend.
+React.js: Library for building user interfaces.
+Tailwind CSS: Utility-first CSS framework for styling.
+Clerk: Authentication service for handling user authentication.
+Pinecone: Vector database for efficient document search and retrieval.
+PostgreSQL: Relational database for storing user data.
+Amazon S3: Storage service for storing user-uploaded files.
+OpenAI: AI models for generating document embeddings and processing user queries.
+Langchain: Pipeline creation tool for processing user queries.
+Contributions
+Contributions are welcome! If you have any ideas or suggestions to improve BillBuddy, feel free to create an issue or submit a pull request.
