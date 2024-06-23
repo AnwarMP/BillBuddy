@@ -43,6 +43,17 @@ import {
     stripePriceId: varchar("stripe_price_id", { length: 256 }),
     stripeCurrentPeriodEnd: timestamp("stripe_current_period_ended_at"),
   });
+
+    // New table for user concerns
+    export const userConcerns = pgTable("user_concerns", {
+        id: serial("id").primaryKey(),
+        chatId: integer("chat_id")
+            .references(() => chats.id)
+            .notNull(),
+        concern: text("concern").notNull(),
+        createdAt: timestamp("created_at").notNull().defaultNow(),
+    });
+
   
   // drizzle-orm
   // drizzle-kit
