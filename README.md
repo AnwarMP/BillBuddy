@@ -11,7 +11,7 @@ Follow these steps to set up and run BillBuddy on your local machine.
 Clone the BillBuddy repository from GitHub to your local machine.
 
 ```bash
-git clone https://github.com/yourusername/billbuddy.git
+git clone https://github.com/anwarmp/billbuddy.git
 cd billbuddy
 ```
 
