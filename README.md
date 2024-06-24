@@ -64,14 +64,16 @@ npm run dev
 Your application should now be running on http://localhost:3000.
 
 ### Technologies Used
-Next.js: React framework for building the frontend.
-React.js: Library for building user interfaces.
-Tailwind CSS: Utility-first CSS framework for styling.
-Clerk: Authentication service for handling user authentication.
-Pinecone: Vector database for efficient document search and retrieval.
-PostgreSQL: Relational database for storing user data.
-Amazon S3: Storage service for storing user-uploaded files.
-OpenAI: AI models for generating document embeddings and processing user queries.
-Langchain: Pipeline creation tool for processing user queries.
-Contributions
+* Next.js: React framework for building the frontend.
+* React.js: Library for building user interfaces.
+* Tailwind CSS: Utility-first CSS framework for styling.
+* Clerk: Authentication service for handling user authentication.
+* Pinecone: Vector database for efficient document search and retrieval.
+* PostgreSQL: Relational database for storing user data.
+* Amazon S3: Storage service for storing user-uploaded files.
+* OpenAI: AI models for generating document embeddings and processing user queries.
+* Langchain: Pipeline creation tool for processing user queries.
+
+
+### Contributions
 Contributions are welcome! If you have any ideas or suggestions to improve BillBuddy, feel free to create an issue or submit a pull request.
